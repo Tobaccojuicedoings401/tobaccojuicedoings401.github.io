@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Russian River AI Partners | AI Consulting & Marketing for Sonoma County Businesses</title>
+<meta name="description" content="Honest AI consulting and marketing for Sonoma County businesses. Free consultation. We tell you what's worth doing with AI and marketing, and what isn't.">
+<style>
+  :root {
+    --ink: #1a1d1f;
+    --ink-soft: #4a4f54;
+    --paper: #faf8f4;
+    --card: #ffffff;
+    --accent: #7a3b2e;
+    --accent-soft: #f0e4dd;
+    --line: #e6e0d8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,244,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 16px; padding-bottom: 16px;
+  }
+  .logo { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  nav a { color: var(--ink-soft); text-decoration: none; margin-left: 28px; font-size: 0.95rem; }
+  nav a:hover { color: var(--ink); }
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff !important;
+    padding: 11px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.15s ease;
+  }
+  .cta-btn:hover { opacity: 0.88; }
+  .cta-btn.ghost {
+    background: transparent;
+    color: var(--accent) !important;
+    border: 1.5px solid var(--accent);
+  }
+
+  .hero {
+    padding: 88px 0 64px;
+    text-align: center;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 5vw, 3.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero p.sub {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0 auto 34px;
+  }
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  section { padding: 64px 0; }
+  section.alt { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto 44px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+  }
+  .service-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+  .service-card p { color: var(--ink-soft); font-size: 0.96rem; }
+
+  .trust-block {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 36px;
+  }
+  .trust-block p { color: var(--ink-soft); margin-bottom: 16px; }
+  .trust-block p:last-child { margin-bottom: 0; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+  .faq-item:first-child { padding-top: 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .faq-item p { color: var(--ink-soft); font-size: 0.97rem; }
+
+  .final-cta {
+    text-align: center;
+    padding: 72px 0;
+  }
+  .final-cta h2 { margin-bottom: 14px; }
+  .final-cta p { color: var(--ink-soft); margin-bottom: 30px; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--ink-soft); }
+
+  @media (max-width: 600px) {
+    nav a { margin-left: 14px; font-size: 0.85rem; }
+    .hero { padding: 56px 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo">Russian River AI Partners</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://calendly.com/russianriverai/30-minute-meeting-clone" target="_blank" rel="noopener" class="cta-btn ghost" style="margin-left:20px;">Book Free Call</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Sonoma County · North Bay</span>
+    <h1>Local Sonoma County AI Consulting &amp; Marketing</h1>
+    <p class="sub">We help owner-operated local businesses figure out what's actually worth doing with AI and marketing, and just as often, tell you what's not worth your money. No software to buy, no long contracts, no jargon.</p>
+    <div class="hero-ctas">
+      <a href="https://calendly.com/russianriverai/30-minute-meeting-clone" target="_blank" rel="noopener" class="cta-btn">Book a Free 30-Minute Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <h2>What We Do</h2>
+    <p class="section-sub">Two things, done together when it makes sense: honest advice on AI, and hands-on marketing that actually runs.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>AI Consulting</h3>
+        <p>Readiness assessments, honest tool recommendations, and straightforward implementation, priced on judgment rather than hours worked. We'll tell you what's worth doing, and just as often, what isn't.</p>
+      </div>
+      <div class="service-card">
+        <h3>Creative Testing &amp; Optimization</h3>
+        <p>Most local businesses are quietly losing customers to underperforming website and ad creative without ever knowing it. We use cutting-edge AI analytics and rigorous testing to find your best-performing assets and links, so people who land on your site get the version that actually converts.</p>
+      </div>
+      <div class="service-card">
+        <h3>Ongoing Management</h3>
+        <p>A small setup fee to get started, then a low monthly rate where we manage what we built and send you a straightforward performance readout. No long-term contract required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Why Trust Us With This</h2>
+    <div class="trust-block">
+      <p>We bring over 9 years of workflow production and AI-automation experience spanning FAANG-scale companies like Amazon to multi-billion-dollar game publishers like Activision and Scopely, including work on games that generated hundreds of millions to billions of dollars in revenue, plus 5+ years at big brands like Adidas, Michael Kors, and Kate Spade, giving us a firsthand understanding of customer habits and trends. On top of that, we've spent the last two years focused specifically on ad creation, analytics, and testing, learning how to reach and understand different audiences.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>What exactly do you do? Are you selling me software?</h3>
+      <p>No products, no subscriptions to some platform we built. We're advisors first: we learn your business, figure out where the real opportunities are, and build or run the specific thing that addresses it. We also run the ongoing work if you want us to, since we're not just a consultant who leaves you with a report.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why AI, and why now?</h3>
+      <p>AI has changed what a small team can take on. A business with a handful of employees can now have the kind of consistency and follow-through that used to require a much bigger team. We're not here to sell AI as a concept; we're here to tell you honestly which parts of that actually apply to you.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>My business is doing fine. Why would I need this?</h3>
+      <p>Fair question, and often the honest answer is: you might not, not yet. If growth has come mostly from referrals and timing rather than anything deliberate, there's usually something worth exploring. If that's not you, we'll say so on the call.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What kind of businesses do you work with?</h3>
+      <p>Owner-operated local businesses in Sonoma County and the broader North Bay: wineries, restaurants, hospitality, retail, and other small and mid-sized operations where the owner is still closely involved in day-to-day work.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you just tell us what to do, or do we actually have a say?</h3>
+      <p>This is built to be collaborative, not prescriptive. You know your customers and your business better than we ever will, so we work with you on what actually fits how you operate, not a one-size-fits-all package.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Will AI replace my staff?</h3>
+      <p>No. Think of it as taking the repetitive, administrative weight off the people you already have, so they spend more time on the parts of the job that actually need a person.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need to be technical to work with you?</h3>
+      <p>Not at all. That's the point of hiring an advisor instead of buying software. We handle the technical side and explain everything in plain language.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does it cost?</h3>
+      <p>The first consultation is free, always. If there's a real fit, we typically start with a small setup fee, plus a low monthly rate to manage and monitor it, including a plain-language monthly readout. No long-term contract required to get started.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="final-cta">
+  <div class="wrap">
+    <h2>Let's Talk About Your Business</h2>
+    <p>Free 30-minute consultation. No pressure, no obligation, just an honest read on what's worth doing.</p>
+    <a href="https://calendly.com/russianriverai/30-minute-meeting-clone" target="_blank" rel="noopener" class="cta-btn">Book Your Free Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Russian River AI Partners · Serving Sonoma County &amp; the North Bay</p>
+    <p style="margin-top:8px;"><a href="mailto:russianriverai@gmail.com">russianriverai@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
