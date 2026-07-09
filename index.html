@@ -154,6 +154,43 @@
     nav a { margin-left: 14px; font-size: 0.85rem; }
     .hero { padding: 56px 0 40px; }
   }
+
+  .stats-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 44px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+  .stat { text-align: center; }
+  .stat .num { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; color: var(--accent); }
+  .stat .label { font-size: 0.82rem; color: var(--ink-soft); margin-top: 4px; }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+  }
+  .process-step {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    position: relative;
+  }
+  .process-step .step-num {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+  .process-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .process-step p { color: var(--ink-soft); font-size: 0.94rem; }
 </style>
 </head>
 <body>
@@ -162,6 +199,7 @@
   <div class="wrap">
     <a href="#" class="logo">Russian River AI Partners</a>
     <nav>
+      <a href="#approach">Approach</a>
       <a href="#services">Services</a>
       <a href="#faq">FAQ</a>
       <a href="https://calendly.com/russianriverai/30-minute-meeting-clone" target="_blank" rel="noopener" class="cta-btn ghost" style="margin-left:20px;">Book Free Call</a>
@@ -177,10 +215,41 @@
     <div class="hero-ctas">
       <a href="https://calendly.com/russianriverai/30-minute-meeting-clone" target="_blank" rel="noopener" class="cta-btn">Book a Free 30-Minute Consultation</a>
     </div>
+
+    <div class="stats-strip">
+      <div class="stat"><div class="num">9+ yrs</div><div class="label">Production &amp; AI-automation experience</div></div>
+      <div class="stat"><div class="num">5+ yrs</div><div class="label">Brand marketing at global brands</div></div>
+      <div class="stat"><div class="num">2 yrs</div><div class="label">Focused on ad creative &amp; testing</div></div>
+      <div class="stat"><div class="num">Free</div><div class="label">First consultation, no obligation</div></div>
+    </div>
   </div>
 </section>
 
-<section id="services" class="alt">
+<section id="approach" class="alt">
+  <div class="wrap">
+    <h2>How We Work</h2>
+    <p class="section-sub">Three steps, every time. No jargon, no surprise invoices.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Diagnose</h3>
+        <p>A free consultation where we learn your business, your pain points, and what's already working. We tell you honestly what's worth pursuing, including when the answer is nothing.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>Build</h3>
+        <p>A small setup fee to build the specific thing that addresses your real opportunity, whether that's an AI tool, a website, or a marketing system. Scoped and priced upfront.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Manage</h3>
+        <p>A low monthly rate where we run and monitor what we built, with a plain-language readout each month showing what's working and what to adjust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
   <div class="wrap">
     <h2>What We Do</h2>
     <p class="section-sub">Two things, done together when it makes sense: honest advice on AI, and hands-on marketing that actually runs.</p>
@@ -201,7 +270,7 @@
   </div>
 </section>
 
-<section id="about">
+<section id="about" class="alt">
   <div class="wrap">
     <h2>Why Trust Us With This</h2>
     <div class="trust-block">
@@ -210,7 +279,7 @@
   </div>
 </section>
 
-<section id="faq" class="alt">
+<section id="faq">
   <div class="wrap">
     <h2>Frequently Asked Questions</h2>
 
@@ -251,7 +320,7 @@
 
     <div class="faq-item">
       <h3>What does it cost?</h3>
-      <p>The first consultation is free, always. If there's a real fit, we typically start with a small setup fee, plus a low monthly rate to manage and monitor it, including a plain-language monthly readout. No long-term contract required to get started.</p>
+      <p>The first consultation is free, always. If there's a real fit, setup typically runs a few hundred dollars depending on complexity, plus a monthly management rate starting around $150 to $300 for something straightforward, up to $500 to $800 for a multi-tool setup with more involved monitoring. Every project gets a specific number before any work starts. No long-term contract required.</p>
     </div>
   </div>
 </section>
