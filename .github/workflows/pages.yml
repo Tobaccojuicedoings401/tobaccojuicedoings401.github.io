@@ -30,8 +30,8 @@ jobs:
           k2 = os.environ.get('B26C3D', '')
           idx = pathlib.Path('index.html')
           txt = idx.read_text(encoding='utf-8')
-          out = txt.replace('<!-- 8e81da5d265fcdd994ac461be600ee -->', k1) if k1 else txt
-          out = out.replace('<!--  -->', k2) if k2 else out
+          out = txt.replace('<!-- 89bc467236fc8a096a3e709c1ee227f0b907c976ba -->', k1) if k1 else txt
+          out = out.replace('<!-- 1d24186f6a86667b73581a0c8c0cada412e5439f0903fd -->', k2) if k2 else out
           if out == txt and (k1 or k2):
               sys.exit(1)
           if out != txt:
